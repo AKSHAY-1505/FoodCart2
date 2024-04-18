@@ -1,7 +1,7 @@
 <h1>Menu</h1>
 <div id="foods">
-  <% @foods.each do |food| %>
-    <%= render food %>
+  <% @foods.each do |f| %>
+    <%= render partial: 'customer_pages/food' , locals: { food: f } %>
   <% end %>
 </div>
 <%= button_to "Sign Out", destroy_customer_session_path, method: :delete%>
