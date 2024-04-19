@@ -1,5 +1,5 @@
 class CustomerPagesController < ApplicationController
-    def index
+    def dashboard
         @foods = Food.all
     end
 end

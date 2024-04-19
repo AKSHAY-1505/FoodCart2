@@ -13,7 +13,11 @@
   </head>
   <body>
     <header>
-      <%= render 'shared/navbar'%>
+      <% if admin_signed_in? %>
+        <%= render 'shared/admin_navbar'%>
+      <% else %>
+        <%= render 'shared/customer_navbar'%>
+      <% end %>
     </header>
     <main class = "container-fluid main-content">
       <%= render 'shared/flash'%>
